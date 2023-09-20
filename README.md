@@ -1,5 +1,5 @@
 # ALL_IN_ONE
-Live Link ==>>(https://all-in-one-71kb.onrender.com)
+Live Link ==>>(https://all-76ex.onrender.com)
 
 Certainly! Here's a sample README file that you can use for your GitHub repository to explain your "All-In-One" website:
 
@@ -7,7 +7,7 @@ Certainly! Here's a sample README file that you can use for your GitHub reposito
 
 # All-In-One Website
 
-![Website Preview](https://all-in-one-71kb.onrender.com)
+![Website Preview](https://all-76ex.onrender.com)
 
 
 ## Description
