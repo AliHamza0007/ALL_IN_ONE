@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word_Counter</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        #input {
+            border: 2px solid black;
+        }a{text-decoration: none; color: black;}
+section{height: 100vh; width: 100vw; background-image: url('img/learning.jpg'); background-repeat: no-repeat; background-position: center;background-size: cover; color: white;}
+.bg{background-color: rgb(106, 106, 192);}
+h3{cursor: pointer;}
+li:hover{font-weight: bold; border-radius: 10px;  color: rgb(18, 14, 238); background-color: rgb(138, 132, 132);}
+
+    </style>
+</head>
+
+<body>   
+    <header class=" shadow ">
+        
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary text-light">
+        <div class="container-fluid">
+          <a class="navbar-brand h2 pl-3 text-light" href="#">Word Counter</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item"><a href="./index.html" class="nav-link text-light">Home</a> </li>
+                <li class="nav-item"><a href="./bg_changer.html" class="nav-link text-light">BG Changer</a>
+                </li>
+                <li class="nav-item"><a href="./pageDesign.html" class="nav-link text-light">WebPage
+                        </a></li>
+                <li class="nav-item"><a href="./Temperature Converter.html"
+                        class="nav-link text-light">Temperature Converter</a></li>
+                <li class="nav-item"><a href="./stopwatch.html" class="nav-link text-light">StopWatch</a></li>
+           
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container  text-center p-4">
+        <div class="row">
+            <div class="col"><label for="" class="h3 bg-danger px-5 py-3">Word Counter</label></div>
+        </div>
+        <div class="row">
+            <div class="col-12 px-1">
+                <div>
+                    <textarea autofocus name="" id="input" placeholder="Type Something to count " cols="40" rows="10"></textarea>
+                </div>
+                <span id="word">0</span> Words And <span id="char">0</span> Charactors
+                <button type="reset" id="btn" class=" btn btn-primary px-3">Clear Text</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    var input = document.getElementById("input");
+    btn.onclick = function () {
+        input.value = '';
+    }
+    input.addEventListener('input', function () {
+        var text = this.value;
+        document.getElementById("char").innerText = text.length;
+        text = text.trim();
+        let word = text.split(" ");
+        var wordlist = word.filter(function (el) {
+            return el != "";
+        })
+        document.getElementById("word").innerText = wordlist.length;
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>
